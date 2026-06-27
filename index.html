@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREMISI - DIRTY CIRCLE</title>
+    <style>
+        /* Menggunakan font bernuansa brutalist modern */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Syncopate:wght@700&display=swap');
+
+        body {
+            background-color: #000;
+            color: #ccc;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-transform: uppercase;
+        }
+
+        /* Teks Berjalan (Marquee) Khas FSTVLST */
+        .marquee-container {
+            width: 100%;
+            background-color: #ff0000;
+            color: #000;
+            padding: 12px 0;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            z-index: 10;
+            border-bottom: 2px solid #fff;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Header / Manifesto Utama */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo-img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1.main-title {
+            color: #ff0000;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 3vw;
+            letter-spacing: 5px;
+            margin: 0 0 10px 0;
+        }
+
+        p.subtitle {
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .manifesto {
+            font-size: 0.85em;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #888;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        /* Susunan Ala Tracklist Album FSTVLST */
+        .track-section {
+            padding: 20px 20px 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .track {
+            border-bottom: 1px solid #333;
+            padding: 60px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        .track-info {
+            flex: 1;
+            position: sticky;
+            top: 40px;
+        }
+
+        .track-num {
+            color: #ff0000;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: block;
+            letter-spacing: 3px;
+        }
+
+        .track-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .track-desc {
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            color: #888;
+        }
+
+        .track-desc strong {
+            color: #fff;
+        }
+
+        .track-img-container {
+            flex: 1.5;
+            position: relative;
+        }
+
+        /* Filter Abu-abu lalu berubah berwarna + Efek bayangan merah saat disentuh */
+        .track-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(100%) contrast(120%);
+            border: 2px solid #333;
+            transition: all 0.4s ease;
+        }
+
+        .track:hover .track-img {
+            filter: grayscale(0%) contrast(100%);
+            border-color: #ff0000;
+            box-shadow: -15px 15px 0px #ff0000;
+            transform: translate(5px, -5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.7em;
+            letter-spacing: 2px;
+            color: #555;
+            border-top: 1px solid #333;
+        }
+
+        .footer-logo {
+            color: #ff0000;
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Responsif (Tampilan HP) */
+        @media (max-width: 768px) {
+            .track {
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px 0;
+            }
+            .track-info {
+                position: static;
+            }
+            h1.main-title {
+                font-size: 6vw;
+            }
+            .track-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bar Teks Berjalan -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            I. TANDA #PAGAR &nbsp;&nbsp;&nbsp; II. ATAS NAMA &nbsp;&nbsp;&nbsp; III. ENAM MASA &nbsp;&nbsp;&nbsp; IV. #PREMISI &nbsp;&nbsp;&nbsp; I. TANDA  &nbsp;&nbsp;&nbsp; II. ISLAND VIBES &nbsp;&nbsp;&nbsp; III. SQUAD GOALS &nbsp;&nbsp;&nbsp; IV. PREMISI &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <!-- Intro / Manifesto -->
+    <header class="hero">
+        <img src="Gambar 5.JPG" alt="Logo Premisi" class="logo-img">
+        <h1 class="main-title">#PREMISI - DIRTY CIRCLE</h1>
+        <p class="subtitle">LIHAT. RASAKAN. HIDUPI.</p>
+        <div class="manifesto">
+            syarat pertama adalah<br>
+            percaya<br>
+            syarat kedua<br>
+            lihat syarat pertama<br>
+            lalu dan nanti
+        </div>
+    </header>
+
+    <!-- Konten Berdasarkan Tracklist -->
+    <main class="track-section">
+        
+        <!-- Track I -->
+        <article class="track">
+            <div class="track-info">
+                <span class="track-num">III.I</span>
+                <h2 class="track-title">TANDA #PAGAR</h2>
+                <div class="track-desc">
+                    atas nama<br>
+                    masa muda<br>
+                    yang singkat namun selamanya<br>
+                    <br>
+                    <strong>atas nama - the jeblogs.</strong>
+                </div>
+            </div>
+            <div class="track-img-container">
+                <video class="track-img" autoplay loop muted playsinline>
+                    <source src="OVN.mp4" type="video/mp4">>
+                </video>
+            </div>
+        </article>
+
+        <!-- Track II -->
+        <article class="track">
+            <div class="track-info">
+                <span class="track-num">III.II</span>
+                <h2 class="track-title">MASA - MASA</h2>
+                <div class="track-desc">
+                    masa-masa melewati bersama<br>
+                    masa-masa mulai merajut asa<br>
+                    kita rayakan di masa datang<br>
+                    <br>
+                    <strong>masa-masa - the.</strong>
+                </div>
+            </div>
+            <div class="track-img-container">
+                <img src="Gambar 4.jpg" alt="Island Vibes" class="track-img">
+            </div>
+        </article>
+
+        <!-- Track III -->
+        <article class="track">
+            <div class="track-info">
+                <span class="track-num">III.III</span>
+                <h2 class="track-title">APA KABAR OPUS</h2>
+                <div class="track-desc">
+                    apa kabar satu masa<br>
+                    bernama bersama selamanya<br>
+                    apa kabar satu kawan yang merubah langkah<br>
+                    <br>
+                    <strong>apa kabar opus - festivalist.</strong>
+                </div>
+            </div>
+            <div class="track-img-container">
+                <img src="Gambar 2.JPG" alt="Squad Goals" class="track-img">
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">#P - DR</div>
+        © PREMISI. DIRTY CIRCLE. 2026. ALL RIGHTS RESERVED.
+    </footer>
+
+</body>
+</html>
